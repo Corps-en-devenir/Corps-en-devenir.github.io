@@ -1,0 +1,96 @@
+/* styles.css */
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+
+/* Set the background color for the entire page */
+body {
+    background-color: #5073c4;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.collage-container {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: auto;
+    perspective: 1000px;
+}
+
+.collage-photo {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.collage-photo:nth-child(1) {
+    top: 10%;
+    left: 10%;
+    transform: rotate(-10deg);
+}
+
+.collage-photo:nth-child(2) {
+    top: 20%;
+    left: 20%;
+    transform: rotate(5deg);
+}
+
+.collage-photo:nth-child(3) {
+    top: 30%;
+    left: 30%;
+    transform: rotate(-5deg);
+}
+
+.collage-photo:nth-child(4) {
+    top: 40%;
+    left: 40%;
+    transform: rotate(10deg);
+}
+
+.collage-photo:hover {
+    transform: scale(1.1);
+    z-index: 10;
+}
+/* Style the header */
+header {
+    background-color: white; /* White background for the header */
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    padding: 30px;
+}
+
+header .title {
+
+    font-size: 50px;
+    font : brush script mt;
+    color: #343a40; 
+    text-align: center; 
+    line-height: 100px; 
+}
+
+/* Style the logo */
+header .logo {
+    width: auto; 
+    height: 100px; 
+    margin-right: auto;
+}
+
+/* Style the footer */
+footer {
+    background-color: #343a40; /* Dark-gray background for the footer */
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

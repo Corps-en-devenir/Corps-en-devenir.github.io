@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../src/css/styles.css" rel="stylesheet"> <!-- Link to the new CSS file -->
+</head>
+<body>
+    <header>
+        <img src="../images/logo.png" alt="Association Logo" class="logo">
+        <h1 class="title">Association Corps en Devenir</h1>
+    </header>
+
+    <div class="collage-container">
+        {% for image in images %}
+            <img src="{{ url_for('static', filename='photos/' ~ image) }}" class="collage-photo" alt="Photo">
+        {% endfor %}
+    </div>
+
+    <footer>
+        <a href="https://www.instagram.com/association.corps.en.devenir/">
+            <img src="../images/instagram.webp" alt="Instagram Logo" style="width: 50px; height: 50px;">
+        </a>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
